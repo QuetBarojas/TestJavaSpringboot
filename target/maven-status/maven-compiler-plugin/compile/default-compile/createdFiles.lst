@@ -1,0 +1,7 @@
+com/example/demo/DemoApplication.class
+com/example/demo/web/AutoController.class
+com/example/demo/service/AutoService.class
+com/example/demo/dto/AutoDTO.class
+com/example/demo/repository/AutoJPA.class
+com/example/demo/dto/AutoDTO$AutoDTOBuilder.class
+com/example/demo/model/Auto.class

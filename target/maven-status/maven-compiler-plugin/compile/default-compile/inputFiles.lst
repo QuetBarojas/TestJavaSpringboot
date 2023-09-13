@@ -1,0 +1,6 @@
+/home/quet/Escritorio/TestJavaSpringboot/demo/src/main/java/com/example/demo/dto/AutoDTO.java
+/home/quet/Escritorio/TestJavaSpringboot/demo/src/main/java/com/example/demo/model/Auto.java
+/home/quet/Escritorio/TestJavaSpringboot/demo/src/main/java/com/example/demo/DemoApplication.java
+/home/quet/Escritorio/TestJavaSpringboot/demo/src/main/java/com/example/demo/service/AutoService.java
+/home/quet/Escritorio/TestJavaSpringboot/demo/src/main/java/com/example/demo/web/AutoController.java
+/home/quet/Escritorio/TestJavaSpringboot/demo/src/main/java/com/example/demo/repository/AutoJPA.java
