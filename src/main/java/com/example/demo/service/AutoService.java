@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import com.example.demo.Form.AutoForm;
 import com.example.demo.dto.AutoDTO;
 import com.example.demo.model.Auto;
 import com.example.demo.repository.AutoJPA;
@@ -31,5 +32,12 @@ public class AutoService {
     public AutoDTO getById(long id){
         Auto auto= autoJPA.findById(id);
         return AutoDTO.build(auto);
+    }
+
+    public AutoDTO create(AutoForm autoForm){
+        Auto auto= new Auto(autoForm);
+        autoJPA.save(auto);
+        return AutoDTO.build(auto);
+
     }
 }
