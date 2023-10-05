@@ -18,7 +18,7 @@ public class AutoService {
     private final  AutoJPA autoJPA;
 
     public List<AutoDTO> getAll(){
-        List<Auto> autos= autoJPA.findAll();
+        final List<Auto> autos= autoJPA.findAll();
 
         if(autos.isEmpty()){
             return Collections.emptyList();
@@ -29,13 +29,26 @@ public class AutoService {
     }
 
 
-    public AutoDTO getById(long id){
-        Auto auto= autoJPA.findById(id);
+    public Auto getById(final long id){
+        final Auto auto= autoJPA.findById(id);
+        return auto;
+    }
+
+    public AutoDTO getAutoDTOById(final long id){
+        final Auto auto= autoJPA.findById(id);
         return AutoDTO.build(auto);
     }
 
-    public AutoDTO create(AutoForm autoForm){
-        Auto auto= new Auto(autoForm);
+    public AutoDTO create(final AutoForm autoForm){
+       final Auto auto= new Auto(autoForm);
+        autoJPA.save(auto);
+        return AutoDTO.build(auto);
+
+    }
+
+    public AutoDTO update(final long id ,final AutoForm autoForm){
+        final  Auto auto=getById(id);
+        auto.update(autoForm);
         autoJPA.save(auto);
         return AutoDTO.build(auto);
 

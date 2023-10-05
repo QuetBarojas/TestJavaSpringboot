@@ -40,4 +40,9 @@ public class Auto implements Serializable {
         this.marca= autoForm.getMarca();
         this.placas=autoForm.getPlacas();
     }
+
+    public void update(AutoForm autoForm){
+        this.marca= autoForm.getMarca();
+        this.placas=autoForm.getPlacas();
+    }
 }
